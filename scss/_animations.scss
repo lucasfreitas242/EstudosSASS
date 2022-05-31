@@ -1,0 +1,30 @@
+@mixin stars_fade {
+    animation: gradient 10s ease-in-out alternate infinite;
+    @keyframes gradient {
+        from {
+            background-position: 0 50%;
+        }
+
+        to {
+            background-position: 100% 50%;
+        }
+    }
+}
+
+@mixin fade_out {
+    animation: fade_out 10s ease-out  normal infinite;
+
+    @keyframes fade_out {
+        from {
+            transform: scale(100%, 100%);
+        }
+
+        50% {
+            transform: scale(50%, 50%);
+        }
+
+        to {
+            transform: scale(0, 0);
+        }
+    }
+}
